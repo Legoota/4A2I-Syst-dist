@@ -1,4 +1,4 @@
-# 4A2I - Systèmes distribués<img align="right" width="200" height="100" src="https://github.com/Legoota/4A2I-Syst-dist/blob/master/logo.png" alt="Logo Polytech">
+# 4A2I - Systèmes distribués<img align="right" width="200" height="100" src="https://github.com/Legoota/4A2I-Syst-dist/blob/main/logo.png" alt="Logo Polytech">
 ---
 ### Summary
 
