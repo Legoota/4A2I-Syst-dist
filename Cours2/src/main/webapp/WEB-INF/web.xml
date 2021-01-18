@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+    <servlet>
+        <!-- les deux éléments suivants donnent un nom au servlet et la classe dans lequel il se trouve-->
+        <servlet-name>Test</servlet-name>
+        <servlet-class>fr.polytech.demo.Test</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Test</servlet-name>
+        <url-pattern>/test</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!-- les deux éléments suivants donnent un nom au servlet et la classe dans lequel il se trouve-->
+        <servlet-name>Bd</servlet-name>
+        <servlet-class>fr.polytech.demo.Bd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Bd</servlet-name>
+        <url-pattern>/bd</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!-- les deux éléments suivants donnent un nom au servlet et la classe dans lequel il se trouve-->
+        <servlet-name>Jee</servlet-name>
+        <servlet-class>fr.polytech.demo.Jee</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Jee</servlet-name>
+        <url-pattern>/jee</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!-- les deux éléments suivants donnent un nom au servlet et la classe dans lequel il se trouve-->
+        <servlet-name>Ms</servlet-name>
+        <servlet-class>fr.polytech.demo.Ms</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Ms</servlet-name>
+        <url-pattern>/ms</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <!-- les deux éléments suivants donnent un nom au servlet et la classe dans lequel il se trouve-->
+        <servlet-name>Sd</servlet-name>
+        <servlet-class>fr.polytech.demo.Sd</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Sd</servlet-name>
+        <url-pattern>/sd</url-pattern>
+    </servlet-mapping>
+</web-app>
