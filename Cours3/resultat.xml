@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<personne>
+    <nom>test</nom>
+    <numero>0</numero>
+    <prenom>test_prenom</prenom>
+</personne>

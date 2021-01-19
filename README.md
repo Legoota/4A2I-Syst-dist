@@ -74,6 +74,63 @@ Ensuite, les fichiers *vue* sont des fichiers **.jsp**: il s'agit de fichiers *H
 Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux *jsps*. Par exemple, la balise ```<%@ include file="menu.jsp"%>``` permet d'insérer la page *menu.jsp* à l'intérieur de cette propre page.
 
 ---
+### Notes cours 3
+
+#### API et interopérabilité
+* Permet de transmettre des informations du *front-end* vers le *back-end* à l'aide de la **sérialisation** puis de la **désérialisation** des données
+* XML:
+  * Fonctionne avec des balises pour structurer les données
+  * Exemple de structure:
+    ```xml
+    <etudiant>
+        <id>1234</id>
+        <nom>Onyme</nom>
+        <prenom>Anne</prenom>
+        <moyenne>12</moyenne>
+    </etudiant>
+    ```
+  * Utilisable pour faire des requetes
+* SOAP: Simple Object Access Protocol
+
+#### Structure projet JEE: JAXB et JAX-WS
+* Permet de structurer le code à l'aide d'annotations ```@```
+* Peut remplacer les balises de ```web.xml```
+
+#### Serialization
+* En Java, la sérialisation d'une classe se fait en implémentant *Serializable*
+* Nécessité d'avoir un constructeur vide
+
+#### Maven
+* Permet de gérer les dépendances externes au projet
+* On se concentre juste sur notre projet
+* Configure a notre place
+* ```mvn archetype:generate``` permet de générer un projet Java simple
+* Un projet *Maven* contient un fichier **pom.xml**, qui contient l'ensemble des dépendances
+* Convention: un projet *Maven* a une structure donnée
+* ```mvn eclipse:ecplise``` est un plugin *goal*. ```mvn idea:idea``` pour *IntelliJ IDEA* est obsolète
+* Cycle de vie de *Maven*:
+  * ```mvn validate```: validation
+  * ```mvn compile```: compilation
+  * ```mvn test```: lancement des tests unitaires
+  * ```mvn package```: packaging
+  * ```mvn install```: création du *.jar*
+  * ```mvn deploy```: déploiement
+  * ```mvn site```: générer le site du projet
+
+#### JUnit
+* Tests unitaires
+* Format spécifique des tests
+* Permet de tester le code automatiquement
+* Lors des tests unitaires, la fonction ```SetUp()``` est exécutée avant le début des tests. Elle permet d'initialiser les éléments à tester
+* Les annotations permettent de définir le comportement de chaque méthode:
+  * ```@Before```: avant chaque test
+  * ```@After```: après chaque test
+  * ```@Test```: un test
+* Plusieurs types de tests différents:
+  * Les *asserts*: permettent de vérifier l'état ou la valeur d'un objet après une méthode, ...
+  * Les tests de lancement d'erreur: permettent de vérifier qu'une fonction lance bien une erreur si elle est mal utilisée
+
+---
 ### Authors
 * Léo Boulard
 * Léo Krebs
