@@ -24,10 +24,10 @@
  * Permet de séparer la vue, le controlleur (=l'aiguilleur) et le calcul
  * Evite d'avoir tout le code dans un seul fichier
  * Le rôle du controlleur est de transmettre les informations demandées par l'utilisateur par le biais du controlleur, vers une vue rendue à l'utilisateur
-Dans le cas d'un projet JEE, nous avons:
- * Le *controlleur* (C) est représenté par la Servlet
- * La *vue* (V) est représentée par les JSPs
- * Le *model* (M) est représenté par des classes Java
+ * Dans le cas d'un projet JEE, nous avons:
+   * Le *controlleur* (C) est représenté par la Servlet
+   * La *vue* (V) est représentée par les JSPs
+   * Le *model* (M) est représenté par des classes Java
 
 #### Différents types de languages
  * Language compilé: Compilation obligatoire du code afin d'être utilisable
