@@ -35,7 +35,7 @@
  * Language *intermédiaire*: Nécessite une compilation et a aussi besoin d'être interprété (par exemple: Java)
 
 #### Struture par défaut d'un projet JEE
-La partie *model* ainsi que *controlleur* est située dans le répertoire *src* du projet. La partie *vue* quant à elle est placé dans le dossier *webapp* (ou *WebContents*).
+La partie *model* ainsi que *controlleur* est située dans le répertoire *src* du projet. La partie *vue* quant à elle est placée dans le dossier *webapp* (ou *WebContents*).
 
 Voici un exemple de *controlleur* (en JEE: **Servlet**). Nous pouvons voir que cette classe étend *HttpServlet* et qu'elle contient l'annotation *@WebServlet*. Il est nécessaire d'avoir un constructeur vide ```Sd() { super(); }``` ainsi que les fonctions ```doGet(HttpServletRequest req, HttpServletResponse resp)``` et ```doPost(HttpServletRequest req, HttpServletResponse resp)```.
 ```java
