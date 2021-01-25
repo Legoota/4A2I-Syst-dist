@@ -54,7 +54,7 @@ public class MonService {
 
     // Annotation JAX-WS
     @WebMethod(operationName = "methodeConv")
-    public double Convertir(@WebParam(name = "montant") double mt) { return mt*1.6; }
+    public double Convertir(double mt, double taux) { return mt*taux; }
 
     // Methode réalisant la somme entre deux double
     @WebMethod(operationName = "methodeSomme")
@@ -62,6 +62,7 @@ public class MonService {
 
     @WebMethod(operationName = "affichage")
     public Product AfficherProduit(int code) {
-        return new Product(code, "Desc de l'item " + code, code*50);
+        int index = isInProduits(code);
+        return index >= 0 ? products.get(index) : null;
     }
 }
