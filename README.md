@@ -134,7 +134,7 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
 ---
 ### Notes cours 4
 
-#### WebServices & SOAP
+#### WebServices & SOAP (Simple Object Access Protocol)
 * Plusieurs *annotations* sont utilisées afin de créér un service web SOAP:
   * ```@WebService(targetNamespace = 'ns')```: A mettre sur la classe de *Service*
   * ```@WebMethod(operationName = 'on')```: A mettre sur une methode dont on souhaite avoir accès
