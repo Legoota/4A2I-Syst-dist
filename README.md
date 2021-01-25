@@ -130,6 +130,16 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
   * Les *asserts*: permettent de vérifier l'état ou la valeur d'un objet après une méthode, ...
   * Les tests de lancement d'erreur: permettent de vérifier qu'une fonction lance bien une erreur si elle est mal utilisée
 
+
+---
+### Notes cours 4
+
+#### WebServices & SOAP
+* Plusieurs *annotations* sont utilisées afin de créér un service web SOAP:
+  * ```@WebService(targetNamespace = 'ns')```: A mettre sur la classe de *Service*
+  * ```@WebMethod(operationName = 'on')```: A mettre sur une methode dont on souhaite avoir accès
+* Nécessité d'utiliser la classe ```Endpoint``` avec la méthode ```publish(url,service)``` afin de rendre accessible le service
+
 ---
 ### Authors
 * Léo Boulard
