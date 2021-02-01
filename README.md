@@ -154,6 +154,10 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
     * PUT: insertion d'une nouvelle ressource
     * DELETE: suppression d'une ressource
     * ...
+  * Plusieurs couches:
+    * Présentation
+    * Session
+    * Entity
 
 ---
 ### Authors
