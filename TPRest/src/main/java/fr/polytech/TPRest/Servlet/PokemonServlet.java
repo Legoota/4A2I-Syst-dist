@@ -3,6 +3,7 @@ package fr.polytech.TPRest.Servlet;
 import javax.servlet.http.HttpServlet;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
+import javax.ws.rs.core.Response;
 
 import fr.polytech.TPRest.Models.Pokemon;
 
@@ -35,16 +36,16 @@ public class PokemonServlet extends HttpServlet {
         return pokemons;
     }
 
-    @POST
-    @Path("getPokemon")
+    @GET
+    @Path("getPokemon/{nom}")
     @Consumes("text/plain")
     @Produces(MediaType.APPLICATION_JSON)
-    public Pokemon getPokemon(String nom) {
+    public Response getPokemon(@PathParam("nom") String nom) {
         for(Pokemon p: pokemons){
             if(p.getNom().equals(nom))
-                return p;
+                return Response.ok().entity(p).build();;
         }
-        return null;
+        return Response.noContent().build();
     }
 
     @POST
