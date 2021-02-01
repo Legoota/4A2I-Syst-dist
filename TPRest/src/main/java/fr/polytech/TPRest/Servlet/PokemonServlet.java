@@ -35,7 +35,7 @@ public class PokemonServlet extends HttpServlet {
         return pokemons;
     }
 
-    @GET
+    @POST
     @Path("getPokemon")
     @Consumes("text/plain")
     @Produces(MediaType.APPLICATION_JSON)
@@ -50,9 +50,15 @@ public class PokemonServlet extends HttpServlet {
     @POST
     @Path("editPokemon")
     @Consumes(MediaType.APPLICATION_JSON)
-    @Produces("text/plain")
-    public String editPokemon(Pokemon pok) {
-        return "test";
+    @Produces(MediaType.APPLICATION_JSON)
+    public boolean editPokemon(Pokemon pok) {
+        for(Pokemon p: pokemons){
+            if(p.getNom().equals(pok.getNom())){
+                p.setNiveau(pok.getNiveau()); // change le niveau du pokemon
+                return true;
+            }
+        }
+        return false;
     }
 
     @DELETE

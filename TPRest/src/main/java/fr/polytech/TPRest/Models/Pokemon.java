@@ -1,6 +1,7 @@
 package fr.polytech.TPRest.Models;
 
 import java.io.Serializable;
+import java.util.Objects;
 
 public class Pokemon implements Serializable {
     private String nom;
@@ -21,6 +22,14 @@ public class Pokemon implements Serializable {
     public int getNiveau() { return niveau; }
 
     public void setNiveau(int niveau) { this.niveau = niveau; }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Pokemon pokemon = (Pokemon) o;
+        return niveau == pokemon.niveau && nom.equals(pokemon.nom);
+    }
 
     @Override
     public String toString() {
