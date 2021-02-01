@@ -141,6 +141,21 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
 * Nécessité d'utiliser la classe ```Endpoint``` avec la méthode ```publish(url,service)``` afin de rendre accessible le service
 
 ---
+### Notes cours 5
+
+#### REST
+* Web = ressources + URL + HTTP
+* API: *Application programming interface*: Permet de faire des interfaces disponibles de programme à programme
+* API REST: 
+  * Nécessaire de définir le format échangé (*JSON*, *XML*, ...)
+  * Utilise les protocoles HTTP telles que:
+    * GET: lecture de ressources (représentation publique de la ressource)
+    * POST: envoi de messages à une ressource existante
+    * PUT: insertion d'une nouvelle ressource
+    * DELETE: suppression d'une ressource
+    * ...
+
+---
 ### Authors
 * Léo Boulard
 * Léo Krebs
