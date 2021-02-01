@@ -146,7 +146,10 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
 #### REST
 * Web = ressources + URL + HTTP
 * API: *Application programming interface*: Permet de faire des interfaces disponibles de programme à programme
-* API REST: 
+* <u>UDDI</u> : Universal Description Discovery and Integration
+* <u>WSDL</u> : WebService Description Language (spécifications détaillées des entrées / sorties, l'url d'accès, ... /!\On a pas la description des méthodes côté serveur)
+* <u>API REST</u> : façon d'exposer et de consommer les ressources 
+  Dans les API REST, l'échange de message ce fait en format JSON (il n'est pas basé sur le balisage contrairement au XML, il se base sur les méthodes "clé : valeur")
   * Nécessaire de définir le format échangé (*JSON*, *XML*, ...)
   * Utilise les protocoles HTTP telles que:
     * GET: lecture de ressources (représentation publique de la ressource)
