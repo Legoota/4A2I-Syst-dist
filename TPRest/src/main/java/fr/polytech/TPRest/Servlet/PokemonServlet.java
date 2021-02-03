@@ -5,6 +5,7 @@ import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
+import fr.polytech.TPRest.DBManager.PokemonManager;
 import fr.polytech.TPRest.Models.Pokemon;
 
 import java.util.ArrayList;
@@ -19,6 +20,14 @@ public class PokemonServlet extends HttpServlet {
         pokemons.add(new Pokemon("salameche", 60));
         pokemons.add(new Pokemon("carapuce", 70));
         pokemons.add(new Pokemon("bulbizarre",80));
+    }
+
+    @GET
+    @Path("pokemons")
+    @Produces(MediaType.APPLICATION_JSON)
+    public List<Pokemon> getPokemonsFromDB() {
+        PokemonManager pm = new PokemonManager();
+        return pm.getAll();
     }
 
     @PUT
