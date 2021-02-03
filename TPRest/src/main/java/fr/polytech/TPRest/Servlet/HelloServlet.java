@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.*;
 import javax.servlet.annotation.*;
 import javax.ws.rs.*;
+import javax.ws.rs.core.Application;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.NewCookie;
 import javax.ws.rs.core.Response;
@@ -62,7 +63,7 @@ public class HelloServlet extends HttpServlet {
         return p;
     }
 
-    // ecrire une methode permettant d'ajouter un produit passé au format json et le renvoyer en xml
+    // ecrire une methode permettant d'ajouter un produit passé au format json et le renvoyer en XML
 
     @POST
     @Path("ajouterunproduitBis")
@@ -70,6 +71,18 @@ public class HelloServlet extends HttpServlet {
     @Produces(MediaType.APPLICATION_XML)
     public Product ajouterUnProduitBis(Product p){
         liste.add(p);
+        return p;
+    }
+
+    @DELETE
+    @Path("supprimerunproduit/{code}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Product supprimerUnProduit(@PathParam("code") int code) {
+        Product p = new Product();
+        for(int i=0;i<liste.size();i++){
+            if(code==liste.get(i).getCode())
+                p = liste.remove(i);
+        }
         return p;
     }
 

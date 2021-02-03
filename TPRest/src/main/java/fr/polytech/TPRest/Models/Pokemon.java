@@ -1,7 +1,6 @@
 package fr.polytech.TPRest.Models;
 
 import java.io.Serializable;
-import java.util.Objects;
 
 public class Pokemon implements Serializable {
     private String nom;
