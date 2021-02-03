@@ -163,6 +163,35 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
     * Entity
 
 ---
+### Notes cours 6
+
+#### Hibernate
+* Framework gérant la persistance des objets en BDD relationnelle
+
+#### Persistance
+ * Permettre de faire le lien entre une classe *Model* et une table de base de données
+ * Configuration hibernate:
+   * Fichier de configuration ```hibernate.cfg.xml```
+   * Propriétés importantes:
+     * ```hibernate.connection.driver_class```: driver de base de données
+     * ```connection.url```: lien vers la base de données
+     * ```connection.username```: nom de l'utilisateur se loggant
+   * Mappings:
+     * Permet de déclarer les classes a relier avec des tables de la BDD
+ * Classe *HibernateFactory*:
+   * Est une classe *factory* (un peu similaire a un *singleton*) permettant d'ouvrir une connexion à la BDD
+ * Classe *PokemonManager*:
+   * Permet de déclarer les différentes méthodes sur des objets *Pokemon*, qui seront ensuite traduites vers les objets de la BDD
+   * Utilisation de *sessions* et d'objets *Query* afin d'écrire du code Java qui sera ensuite transformé en code SQL
+ * Classe *Pokemon*:
+   * Classe *Model*, définie a l'aide des annotations ```@Entity``` et ```@Table```
+   * Les attributs de la classe sont définis par l'annotation ```@Column```
+   * L'attribut clé primaire est défini par l'annotation ```@Id```. On peut lui donner la possibilité d'être une valeur auto-incrémentale avec l'annotation ```@GeneratedValue(strategy = GenerationType.IDENTITY)```
+ * Classe *PokemonServlet*:
+   * Utilisation de l'instance de *PokemonManager* afin d'effectuer les appels à la BDD
+   * Pour une meilleure optimisation, il est bon de déclarer la classe manager en tant qu'attribut de la classe servlet plutôt que de l'instancier dans chaque endpoint.
+
+---
 ### Authors
 * Léo Boulard
 * Léo Krebs
