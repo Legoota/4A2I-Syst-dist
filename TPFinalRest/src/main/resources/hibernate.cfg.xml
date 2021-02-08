@@ -18,6 +18,7 @@
         <mapping class="com.polytech.TPFinalRest.Model.Product"/>
         <mapping class="com.polytech.TPFinalRest.Model.Fabrication"/>
         <mapping class="com.polytech.TPFinalRest.Model.Client"/>
+        <mapping class="com.polytech.TPFinalRest.Model.Commande"/>
 
     </session-factory>
 </hibernate-configuration>
