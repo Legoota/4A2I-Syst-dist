@@ -4,8 +4,8 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "product")
-public class Product implements Serializable {
+@Table(name = "produit")
+public class Produit implements Serializable {
 
     @Id
     @Column(name = "id")
@@ -17,9 +17,9 @@ public class Product implements Serializable {
     @JoinColumn(name = "fabrication", referencedColumnName = "id")
     private Fabrication fabrication;
 
-    public Product() { super(); }
+    public Produit() { super(); }
 
-    public Product(String nom, double prix, Fabrication fabrication) {
+    public Produit(String nom, double prix, Fabrication fabrication) {
         super();
         this.nom = nom;
         this.prix = prix;

@@ -15,10 +15,9 @@
         <property name="hibernate.c3p0.timeout">300</property>
         <property name="hibernate.c3p0.max_statements">50</property>
         <property name="hibernate.c3p0.idle_test_period">3000</property>
-        <mapping class="com.polytech.TPFinalRest.Model.Product"/>
+        <mapping class="com.polytech.TPFinalRest.Model.Produit"/>
         <mapping class="com.polytech.TPFinalRest.Model.Fabrication"/>
         <mapping class="com.polytech.TPFinalRest.Model.Client"/>
         <mapping class="com.polytech.TPFinalRest.Model.Commande"/>
-
     </session-factory>
 </hibernate-configuration>

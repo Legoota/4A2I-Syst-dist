@@ -2,7 +2,6 @@ package com.polytech.TPFinalRest.Model;
 
 import javax.persistence.*;
 import java.io.Serializable;
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -19,12 +18,12 @@ public class Commande implements Serializable {
     @JoinColumn(name = "id")
     private Client id_client;
 
-    @OneToMany(targetEntity = Product.class, mappedBy = "id")
-    private List<Product> id_produit = new ArrayList<>();
+    @OneToMany(targetEntity = Produit.class, mappedBy = "id")
+    private List<Produit> id_produit = new ArrayList<>();
 
     public Commande() { super(); }
 
-    public Commande(Client id_client, List<Product> id_produit) {
+    public Commande(Client id_client, List<Produit> id_produit) {
         super();
         this.id_client = id_client;
         this.id_produit = id_produit;
@@ -46,11 +45,11 @@ public class Commande implements Serializable {
         this.id_client = id_client;
     }
 
-    public List<Product> getId_produit() {
+    public List<Produit> getId_produit() {
         return id_produit;
     }
 
-    public void setId_produit(List<Product> id_produit) {
+    public void setId_produit(List<Produit> id_produit) {
         this.id_produit = id_produit;
     }
 }
