@@ -9,7 +9,6 @@ public class Fabrication implements Serializable {
 
     @Id
     @Column(name = "id")
-    @OneToOne(mappedBy = "fabrication")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
     private double prix_coutant;
