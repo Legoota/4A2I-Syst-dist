@@ -3,6 +3,8 @@ package fr.polytech.TPRest.DBManager;
 import fr.polytech.TPRest.Models.Pokemon;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
+
+import javax.ws.rs.core.Response;
 import java.util.List;
 import static fr.polytech.TPRest.DBManager.HibernateFactory.getSession;
 public class PokemonManager {
@@ -28,8 +30,14 @@ public class PokemonManager {
         session.beginTransaction();
         session.update(pokemon);
         session.getTransaction().commit();
-        Query query = session.createQuery("select pokemon from Pokemon as pokemon where pokemon.id =:id");
-        query.setParameter("id", pokemon.getId());
-        return (Pokemon) query.getSingleResult();
+        return pokemon;
+    }
+
+    public Response delete(Pokemon pokemon) {
+        Session session = getSession();
+        session.beginTransaction();
+        session.delete(pokemon);
+        session.getTransaction().commit();
+        return Response.ok().build();
     }
 }

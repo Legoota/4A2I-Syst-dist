@@ -29,6 +29,33 @@ public class PokemonServlet extends HttpServlet {
         PokemonManager pm = new PokemonManager();
         return pm.getAll();
     }
+    
+    @POST
+    @Path("pokemons")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Pokemon createPokemonDB(Pokemon p) {
+        PokemonManager pm = new PokemonManager();
+        return pm.create(p);
+    }
+
+    @PUT
+    @Path("pokemons")
+    @Consumes(MediaType.APPLICATION_JSON)
+    @Produces(MediaType.APPLICATION_JSON)
+    public Pokemon updatePokemonDB(Pokemon p){
+        PokemonManager pm = new PokemonManager();
+        return pm.update(p);
+    }
+
+    @DELETE
+    @Path("pokemons")
+    @Consumes(MediaType.APPLICATION_JSON)
+    public Response deletePokemonDB(Pokemon pokemon)
+    {
+        PokemonManager pm = new PokemonManager();
+        return pm.delete(pokemon);
+    }
 
     @PUT
     @Path("addPokemon")
