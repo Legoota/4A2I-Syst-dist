@@ -1,10 +1,40 @@
 # 4A2I - Systèmes distribués<img align="right" width="200" height="100" src="https://github.com/Legoota/4A2I-Syst-dist/blob/main/logo.png" alt="Logo Polytech">
 ---
-### Summary
 
 4<sup>th</sup> year distributed systems course at the Polytech Nancy's Engineering School.
 
 ---
+
+### Sommaire des dossiers
+ * [25janvier2021](https://github.com/Legoota/4A2I-Syst-dist/tree/main/25janvier2021) : TP comprenant un backend Java + un client Python
+ * [Cours2](https://github.com/Legoota/4A2I-Syst-dist/tree/main/Cours2) : TP réalisé pendant le cours 2 avec différents Servlets
+ * [Cours3](https://github.com/Legoota/4A2I-Syst-dist/tree/main/Cours3) : TP réalisé pendant le cours 3 qui réalise la sérialisation et la désérialisation d'un objet *Personne*
+ * [Cours3_2](https://github.com/Legoota/4A2I-Syst-dist/tree/main/Cours3_2) : Tests de Maven avec calculs et tests unitaires
+ * [TPFinalRest](https://github.com/Legoota/4A2I-Syst-dist/tree/main/TPFinalRest) : Le TP à rendre avec l'utilisation de *Hibernate* et les annotations ```OneToOne```, ```ManyToOne``` et ```OneToMany```
+ * [TPRest](https://github.com/Legoota/4A2I-Syst-dist/tree/main/TPRest) : Le TP complété introduisant l'architecture *Rest*, avec les Pokemon
+ * [demospring](https://github.com/Legoota/4A2I-Syst-dist/tree/main/demospring) : Le TP introduisant à *Spring boot*
+
+---
+
+### Sommaire du cours
+[Notes cours 1](#Notes-cours-1)
+
+[Notes cours 2](#Notes-cours-2)
+
+[Notes cours 3](#Notes-cours-3)
+
+[Notes cours 4](#Notes-cours-4)
+
+[Notes cours 5](#Notes-cours-5)
+
+[Notes cours 6](#Notes-cours-6)
+
+[Notes cours 7](#Notes-cours-7)
+
+[Authors](#authors)
+
+---
+
 ### Notes cours 1
 
 #### Présentation de l'outil Git
