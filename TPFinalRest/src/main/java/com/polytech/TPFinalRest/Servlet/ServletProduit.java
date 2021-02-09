@@ -1,6 +1,8 @@
 package com.polytech.TPFinalRest.Servlet;
 
+import com.polytech.TPFinalRest.DBManager.ClientManager;
 import com.polytech.TPFinalRest.DBManager.ProduitManager;
+import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Produit;
 
 import javax.servlet.http.HttpServlet;
@@ -17,6 +19,14 @@ public class ServletProduit extends HttpServlet {
     public List<Produit> getProductsFromDB() {
         ProduitManager pm = new ProduitManager();
         return pm.getAll();
+    }
+
+    @GET
+    @Path("produits/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Produit getProduitFromId(@PathParam("id") int id){
+        ProduitManager pm = new ProduitManager();
+        return pm.getById(id);
     }
 
     @POST

@@ -1,5 +1,6 @@
 package com.polytech.TPFinalRest.DBManager;
 
+import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Produit;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -24,6 +25,13 @@ public class ProduitManager {
         Session session = getSession();
         Query query = session.createQuery("select produit from Produit as produit");
         return query.getResultList();
+    }
+
+    public Produit getById(int id){
+        Session session = getSession();
+        Query query = session.createQuery("select produit from Produit as produit where produit.id=:id");
+        query.setParameter("id",id);
+        return (Produit) query.getSingleResult();
     }
 
     public Produit update(Produit produit) {
