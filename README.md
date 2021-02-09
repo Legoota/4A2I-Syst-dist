@@ -197,8 +197,14 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
 
 #### Spring boot
  * [Spring Initializr](https://start.spring.io/)
- * *Spring boot* est un framework permettant de générer automatiquement une partie du code
- * 
+ * *Spring boot* est un framework permettant de générer et de définir automatiquement l'infrastructure d'une application Java
+ * Permet de faciliter la vie, évite certains bugs
+ * Il ne reste presque plus de fichiers de propriétés, le plus important étant: ```application.properties```
+   * ```server.port```: permet de changer le port d'écoute du serveur
+ * 3 annotations:
+   * ```Configuration```
+   * ```EnableAutoConfiguration```
+   * ```ComponentScan```
 
 ---
 ### Authors
