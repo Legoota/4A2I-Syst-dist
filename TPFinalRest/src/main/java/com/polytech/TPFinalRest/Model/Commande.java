@@ -14,19 +14,22 @@ public class Commande implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @ManyToOne(cascade = CascadeType.ALL)
-    @JoinColumn(name = "id")
+    @ManyToOne(targetEntity = Client.class)
+    @JoinColumn(name = "id_client", referencedColumnName = "id")
     private Client id_client;
 
-    @OneToMany(targetEntity = Produit.class, mappedBy = "id")
-    private List<Produit> id_produit = new ArrayList<>();
+    @Column(name = "paye")
+    private boolean paye;
+
+    @OneToMany(targetEntity=Ligne_Commande.class, mappedBy="id_commande")
+    private List<Ligne_Commande> ligne_commandes = new ArrayList<>();
 
     public Commande() { super(); }
 
-    public Commande(Client id_client, List<Produit> id_produit) {
+    public Commande(Client id_client, boolean paye) {
         super();
         this.id_client = id_client;
-        this.id_produit = id_produit;
+        this.paye = paye;
     }
 
     public int getId() {
@@ -45,11 +48,15 @@ public class Commande implements Serializable {
         this.id_client = id_client;
     }
 
-    public List<Produit> getId_produit() {
-        return id_produit;
+    public boolean getPaye() {
+        return paye;
     }
 
-    public void setId_produit(List<Produit> id_produit) {
-        this.id_produit = id_produit;
+    public void setPaye(boolean paye) {
+        this.paye = paye;
     }
+
+    public List<Ligne_Commande> getLigne_commandes() { return ligne_commandes; }
+
+    public void setLigne_commandes(List<Ligne_Commande> ligne_commandes) { this.ligne_commandes = ligne_commandes; }
 }

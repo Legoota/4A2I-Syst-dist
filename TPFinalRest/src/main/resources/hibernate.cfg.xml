@@ -19,5 +19,6 @@
         <mapping class="com.polytech.TPFinalRest.Model.Fabrication"/>
         <mapping class="com.polytech.TPFinalRest.Model.Client"/>
         <mapping class="com.polytech.TPFinalRest.Model.Commande"/>
+        <mapping class="com.polytech.TPFinalRest.Model.Ligne_Commande"/>
     </session-factory>
 </hibernate-configuration>
