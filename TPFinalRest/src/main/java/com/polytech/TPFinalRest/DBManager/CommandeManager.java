@@ -1,6 +1,5 @@
 package com.polytech.TPFinalRest.DBManager;
 
-import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Commande;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -27,6 +26,18 @@ public class CommandeManager {
         return query.getResultList();
     }
 
+    public List<Commande> getAllPaid() {
+        Session session = getSession();
+        Query query = session.createQuery("select commande from Commande as commande where commande.paye=true");
+        return query.getResultList();
+    }
+
+    public List<Commande> getAllPending() {
+        Session session = getSession();
+        Query query = session.createQuery("select commande from Commande as commande where commande.paye=false");
+        return query.getResultList();
+    }
+
     public Commande getById(int id){
         Session session = getSession();
         Query query = session.createQuery("select commande from Commande as commande where commande.id=:id");
@@ -48,5 +59,17 @@ public class CommandeManager {
         session.delete(c);
         session.getTransaction().commit();
         return Response.ok().build();
+    }
+
+    public Commande validateCommande(int id){
+        Session session = getSession();
+        Query query = session.createQuery("select commande from Commande as commande where commande.id=:id");
+        query.setParameter("id",id);
+        Commande c = (Commande) query.getSingleResult();
+        session.beginTransaction();
+        c.setPaye(true);
+        session.update(c);
+        session.getTransaction().commit();
+        return c;
     }
 }
