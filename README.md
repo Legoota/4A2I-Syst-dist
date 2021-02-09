@@ -192,6 +192,15 @@ Nous pouvons voir des balises ```<% %>```, qui sont des balises spécifiques aux
    * Pour une meilleure optimisation, il est bon de déclarer la classe manager en tant qu'attribut de la classe servlet plutôt que de l'instancier dans chaque endpoint.
 
 ---
+
+### Notes cours 7
+
+#### Spring boot
+ * [Spring Initializr](https://start.spring.io/)
+ * *Spring boot* est un framework permettant de générer automatiquement une partie du code
+ * 
+
+---
 ### Authors
 * Léo Boulard
 * Léo Krebs
