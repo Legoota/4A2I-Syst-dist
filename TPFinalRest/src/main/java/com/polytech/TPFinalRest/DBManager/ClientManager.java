@@ -26,6 +26,13 @@ public class ClientManager {
         return query.getResultList();
     }
 
+    public Client getById(int id){
+        Session session = getSession();
+        Query query = session.createQuery("select client from Client as client where client.id=:id");
+        query.setParameter("id",id);
+        return (Client) query.getSingleResult();
+    }
+
     public Client update(Client client) {
         Session session = getSession();
         session.beginTransaction();
@@ -41,4 +48,5 @@ public class ClientManager {
         session.getTransaction().commit();
         return Response.ok().build();
     }
+
 }

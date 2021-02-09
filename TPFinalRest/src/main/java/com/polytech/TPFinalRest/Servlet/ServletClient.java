@@ -20,6 +20,14 @@ public class ServletClient extends HttpServlet {
         return cm.getAll();
     }
 
+    @GET
+    @Path("clients/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Client getClientFromId(@PathParam("id") int id){
+        ClientManager cm = new ClientManager();
+        return cm.getById(id);
+    }
+
     @POST
     @Path("clients")
     @Consumes(MediaType.APPLICATION_JSON)
