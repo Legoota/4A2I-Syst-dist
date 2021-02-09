@@ -4,14 +4,13 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "commande")
+@Table(name = "ligne_commande")
 public class Ligne_Commande implements Serializable {
     @Id
     @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
-    @Column(name = "id_commande")
     private int id_commande;
 
     @ManyToOne(targetEntity = Produit.class)
