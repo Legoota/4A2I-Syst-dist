@@ -1,5 +1,6 @@
 package com.polytech.TPFinalRest.DBManager;
 
+import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Commande;
 import org.hibernate.Session;
 import org.hibernate.query.Query;
@@ -24,6 +25,13 @@ public class CommandeManager {
         Session session = getSession();
         Query query = session.createQuery("select commande from Commande as commande");
         return query.getResultList();
+    }
+
+    public Commande getById(int id){
+        Session session = getSession();
+        Query query = session.createQuery("select commande from Commande as commande where commande.id=:id");
+        query.setParameter("id",id);
+        return (Commande) query.getSingleResult();
     }
 
     public Commande update(Commande c) {

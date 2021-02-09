@@ -1,6 +1,8 @@
 package com.polytech.TPFinalRest.Servlet;
 
+import com.polytech.TPFinalRest.DBManager.ClientManager;
 import com.polytech.TPFinalRest.DBManager.CommandeManager;
+import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Commande;
 
 import javax.servlet.http.HttpServlet;
@@ -17,6 +19,14 @@ public class ServletCommande extends HttpServlet {
     public List<Commande> getAllCommandes() {
         CommandeManager cm = new CommandeManager();
         return cm.getAll();
+    }
+
+    @GET
+    @Path("commandes/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Commande getCommandeFromId(@PathParam("id") int id){
+        CommandeManager cm = new CommandeManager();
+        return cm.getById(id);
     }
 
     @POST
