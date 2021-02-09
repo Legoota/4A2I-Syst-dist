@@ -25,6 +25,13 @@ public class FabricationManager {
         return query.getResultList();
     }
 
+    public Fabrication getById(int id){
+        Session session = getSession();
+        Query query = session.createQuery("select fabrication from Fabrication as fabrication where fabrication.id=:id");
+        query.setParameter("id",id);
+        return (Fabrication) query.getSingleResult();
+    }
+
     public Fabrication update(Fabrication fab) {
         Session session = getSession();
         session.beginTransaction();

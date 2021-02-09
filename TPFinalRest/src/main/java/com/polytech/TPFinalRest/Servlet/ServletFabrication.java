@@ -1,6 +1,8 @@
 package com.polytech.TPFinalRest.Servlet;
 
+import com.polytech.TPFinalRest.DBManager.ClientManager;
 import com.polytech.TPFinalRest.DBManager.FabricationManager;
+import com.polytech.TPFinalRest.Model.Client;
 import com.polytech.TPFinalRest.Model.Fabrication;
 
 import javax.servlet.http.HttpServlet;
@@ -18,6 +20,14 @@ public class ServletFabrication extends HttpServlet {
     public List<Fabrication> getAllFabrications() {
         FabricationManager fm = new FabricationManager();
         return fm.getAll();
+    }
+
+    @GET
+    @Path("fabrications/{id}")
+    @Produces(MediaType.APPLICATION_JSON)
+    public Fabrication getFabricationFromId(@PathParam("id") int id){
+        FabricationManager fm = new FabricationManager();
+        return fm.getById(id);
     }
 
     @POST
