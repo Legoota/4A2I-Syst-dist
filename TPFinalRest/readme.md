@@ -22,8 +22,8 @@ Voir le diagramme UML à la fin de cette page pour les détails concernant ces l
  * [commande/commmandes/](http://localhost:8080/TPFinalRest_war_exploded/commande/commandes)
    * Disponible en **GET**, **PUT**, **POST**, **DELETE**
    * Possibilité de sélectionner un élément spécifique: ```commande/commandes/{n}```
-   * Possibilité d'obtenir les commandes impayées uniquement [commande/commmandes/pending](http://localhost:8080/TPFinalRest_war_exploded/commande/pending)
-   * Possibilité d'obtenir les commandes payées uniquement [commande/commmandes/paid](http://localhost:8080/TPFinalRest_war_exploded/commande/paid)
+   * Possibilité d'obtenir les commandes impayées uniquement [commande/pending](http://localhost:8080/TPFinalRest_war_exploded/commande/pending)
+   * Possibilité d'obtenir les commandes payées uniquement [commande/paid](http://localhost:8080/TPFinalRest_war_exploded/commande/paid)
    * Possibilité d'éditer une commande existante comme payée ```commande/commmandes/validate/{n}```
  * [produit/produits/](http://localhost:8080/TPFinalRest_war_exploded/produit/produits)
    * Disponible en **GET**, **PUT**, **POST**, **DELETE**
