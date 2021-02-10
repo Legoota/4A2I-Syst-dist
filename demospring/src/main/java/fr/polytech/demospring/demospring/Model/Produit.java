@@ -1,10 +1,15 @@
 package fr.polytech.demospring.demospring.Model;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import java.io.Serializable;
 
 public class Produit implements Serializable {
     private int code;
     private String designation;
+    // equivalent de @Transient => permet de ne pas afficher le prix dans la requete
+    // on peut utiliser @JsonIgnoreProperties au dessus de la classe avec les attributs a ignorer au format JSON
+    @JsonIgnore
     private double prix;
 
     public Produit() { super(); }

@@ -31,6 +31,6 @@ public class ProduitDao implements ProduitRepository {
 
     @Override
     public Produit save(Produit produit) {
-        return null;
+        return produits.add(produit) ? produit : null;
     }
 }
